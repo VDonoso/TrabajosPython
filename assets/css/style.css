@@ -1,0 +1,46 @@
+#contenido {
+    background-color: rgb(199, 174, 240);
+    display: inline-block;
+    FLEX-WRAP: WRAP;
+
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+.ITEM {
+    WIDTH: 100%;
+}
+    
+@MEDIA (MIN-WIDTH: 768PX) {
+    .ITEM {
+    WIDTH: 50%;
+    }
+}
+    
+@MEDIA (MIN-WIDTH: 1024PX) {
+   .ITEM {    
+    WIDTH: 33.33%;    
+    }
+}
+
+.tarjeta {
+    margin: 2%;
+    display: inline-block;
+    
+}
+h1{
+    color: rgb(93, 93, 243);
+}
+
+
+
