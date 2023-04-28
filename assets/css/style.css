@@ -5,35 +5,16 @@
 
 }
 
-ul {
-    list-style: none;
-    padding: 0;
+.digimon {
+    cursor: pointer;
   }
   
-  li {
-    margin-bottom: 10px;
-    background-color: #f2f2f2;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
+
 .ITEM {
     WIDTH: 100%;
 }
-    
-@MEDIA (MIN-WIDTH: 768PX) {
-    .ITEM {
-    WIDTH: 50%;
-    }
-}
-    
-@MEDIA (MIN-WIDTH: 1024PX) {
-   .ITEM {    
-    WIDTH: 33.33%;    
-    }
-}
-
-.tarjeta {
+ 
+.tarjeta div:hover {
     margin: 2%;
     display: inline-block;
     
@@ -41,6 +22,5 @@ ul {
 h1{
     color: rgb(93, 93, 243);
 }
-
 
 
