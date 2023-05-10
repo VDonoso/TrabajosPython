@@ -1,11 +1,18 @@
-"""
-magos = (["Harry Houdini"],["David Blaine"], ["Teller"])
-cientificos = (["Newton"], ["Hawking"], ["Einstein"])
-otros = (["Messi"], ["Pele"], ["Juanes"])
-"""
+# Identificar el 3° grupo "otros"
+nombres = ["Harry Houdini", "Newton", "David Blaine", "Hawking", "Messi", "Teller", "Einstein", "Pele", "Juanes"]
+magos = ["Harry Houdini", "David Blaine", "Teller"]
+cientificos = ["Newton", "Hawking", "Einstein"]
 
+todos = nombres + magos + cientificos
+otros = []
 
+for no_repetido in todos:
+    if todos.count(no_repetido) == 1:
+     otros.append(no_repetido)
 
+print(otros)
+
+# Funcion que imprime el nombre de cada persona en la lista
 def imprimir_nombres():
     magos = ("Harry Houdini, David Blaine, Teller")
     cientificos = ("Newton, Hawking, Einstein")
@@ -17,6 +24,7 @@ def imprimir_nombres():
 nombres = imprimir_nombres()
 print(nombres)
 
+# Funcion para hacer granciodosos a los magos
 def hacer_grandioso(a,b='El Gran '):
     grandioso = b + a
     return grandioso
@@ -24,7 +32,15 @@ def hacer_grandioso(a,b='El Gran '):
 cientificos = ("Newton, Hawking, Einstein")
 otros = ("Messi, Pele, Juanes")   
 magos = ["Harry Houdini", "David Blaine","Teller"]
-el_resto = (cientificos, otros)
+
 magos_grandiosos = [hacer_grandioso(nombre)for nombre in magos]
     
-print(magos_grandiosos, el_resto)
+print(magos_grandiosos)
+
+# Mostrar el nombre de todos más modificaciones
+def imprime_todos():
+    completo = (magos_grandiosos, cientificos, otros)
+    return completo
+completo = imprime_todos()
+print(completo)
+
