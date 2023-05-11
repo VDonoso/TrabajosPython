@@ -10,7 +10,7 @@ for no_repetido in todos:
     if todos.count(no_repetido) == 1:
      otros.append(no_repetido)
 
-print(otros)
+#print(otros)
 
 # Funcion que imprime el nombre de cada persona en la lista
 def imprimir_nombres():
@@ -35,7 +35,7 @@ magos = ["Harry Houdini", "David Blaine","Teller"]
 
 magos_grandiosos = [hacer_grandioso(nombre)for nombre in magos]
     
-print(magos_grandiosos)
+#print(magos_grandiosos)
 
 # Mostrar el nombre de todos más modificaciones
 def imprime_todos():
