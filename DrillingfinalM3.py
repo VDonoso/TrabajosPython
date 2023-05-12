@@ -22,7 +22,7 @@ def imprimir_nombres():
     return nombres
 
 nombres = imprimir_nombres()
-print(nombres)
+#print(nombres)
 
 # Funcion para hacer granciodosos a los magos
 def hacer_grandioso(a,b='El Gran '):
@@ -42,5 +42,13 @@ def imprime_todos():
     completo = (magos_grandiosos, cientificos, otros)
     return completo
 completo = imprime_todos()
-print(completo)
+#print(completo)
 
+#Recorrido de todo en una sola lista
+todos_juntos = (nombres, completo)
+final = []
+
+for item in todos_juntos:
+   juntos = imprime_todos()
+   final.append(item)
+print(final)
