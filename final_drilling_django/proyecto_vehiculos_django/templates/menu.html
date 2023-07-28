@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Vehículos</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'vehiculoforms' %}">Agregar</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Listar
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="{% url 'listar' %}">Listado de Vehículos</a></li>
+            </ul>
+        </li>
+        
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav mr-auto">
+        {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a href="/logout">Salir</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Hola, {{user.username}} </a>
+          </li>
+        {% else %}  
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Login</a>
+          </li>
+        {% endif %}
+      </ul>
+    </div>
+  </nav>
+  {% endblock %}

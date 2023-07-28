@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Listado de vehículos</title>
+</head>
+<body>
+  <h1>Listado de vehículos</h1>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Marca</th>
+        <th>Modelo</th>
+        <th>Serial Carroceria</th>
+        <th>Serial Motor</th>
+        <th>Categoria</th>
+        <th>Precio</th>
+        <th>Condicion de Precio</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in vehiculo %}
+      <tr>
+         <td>{{ item.marca }}</td>
+         <td>{{ item.modelo }}</td>
+         <td>{{ item.serial_carroceria }}</td>
+         <td>{{ item.serial_motor }}</td>
+         <td>{{ item.categoria }}</td>
+         <td>{{ item.precio }}</td>
+         <td>
+            {% if item.precio > 30000 %}
+                Alto
+            {% elif item.precio > 10000 and item.precio <= 30000 %}
+                Medio
+            {% elif item.precio <= 10000 %}
+                Bajo
+            {% else %}
+                Valor inválido
+            {% endif %}
+         </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>
+{% endblock %}
